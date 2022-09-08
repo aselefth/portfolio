@@ -1,0 +1,18 @@
+.links {
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: auto;
+  padding: 0;
+  img {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+  }
+}
