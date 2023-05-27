@@ -11,7 +11,7 @@ export function HeroSection() {
 			<div className='flex flex-col md:flex-row gap-10 w-full justify-around'>
 				<p className='sm:text-6xl text-4xl max-w-[30rem] leading-14'>
 					<span className='block'>Привет,</span>меня зовут Андрей, мне
-					20 лет, учусь на 3 курсе университета. я занимаюсь
+					20 лет, учусь на 3 курсе РТУ МИРЭА. Я занимаюсь
 					веб-разработкой 1 год. Пишу на React/NextJs, NestJs.
 				</p>
 				<Image

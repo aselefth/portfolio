@@ -9,7 +9,7 @@ export const projects: RepoType[] = [
 	},
 	{
 		name: 'VK-internship-client',
-		description: 'frontend-приложение для стажировки ВК',
+		description: 'Frontend-приложение для стажировки ВК',
 		links: ['https://github.com/aselefth/vk-internship-client'],
 		stack: ['React', 'TS', 'Redux-Toolkit', 'Tailwind']
 	},
