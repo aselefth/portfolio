@@ -16,6 +16,15 @@ export function GmailForm() {
 					'U-1b2VJJB7-2d4Y9f'
 				)
 				.catch((e) => console.log(e));
+
+			formRef?.current.querySelectorAll('input').forEach((inp) => {
+				inp.value = '';
+			});
+
+			const area = formRef?.current?.querySelector('textarea');
+			if (area) {
+				area.value = '';
+			}
 		}
 	};
 
