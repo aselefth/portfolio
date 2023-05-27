@@ -4,24 +4,106 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: 229, 229, 229;
+  --nav-link-rgb: 75, 75, 75; 
+  --nav-link-rgb-hover: 0, 0, 0;
+  --project-bg: 209, 213, 219;
+  --project-color: 0, 0, 0;
+  --input-color: 0, 0, 0;
+  --border-color: 107, 114, 128;
+  --border-focus: 209, 213, 219;
+  --input-bg: 255, 255, 255;
+  --button-bg:  209, 213, 219;
+  --button-active: 107, 114, 128;
+  --button-hover: 156, 163, 175;
+  --section-border: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 24, 24, 24;
+    --nav-link-rgb: 219, 219, 219; 
+    --nav-link-rgb-hover: 255, 255, 255;
+    --project-bg: 40, 47, 53;
+    --project-color: 255, 255, 255;
+    --input-color: 0, 0, 0;
+    --border-color: 66, 67, 68;
+    --border-focus: 209, 213, 219;
+    --input-bg: 187, 190, 193;
+    --button-bg:  40, 47, 53;
+    --button-color: 255, 255, 255;
+    --button-active: 54, 60, 67;
+    --button-hover: 47, 54, 60;
+    --section-border: 255, 255, 255;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: 
+      rgb(var(--background))
+}
+
+
+.flip {
+  perspective: 600px;
+}
+
+.nonflip-content {
+  transform-style: preserve-3d;
+}
+
+.flip-content {
+  transform: rotateY(180deg);
+}
+
+
+
+.flip-front, .flip-back {
+  backface-visibility: hidden; 
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.nav-link {
+  transition: all .3s;
+  color: rgb(var(--nav-link-rgb));
+
+  &:hover {
+    color: rgb(var(--nav-link-rgb-hover));
+  }
+}
+
+.project-side {
+  background-color: rgb(var(--project-bg));
+  color: rgb(var(--project-color));
+}
+
+.input {
+  color: rgb(var(--input-color));
+  background-color: rgb(var(--input-bg));
+  border: 2px solid rgb(var(--border-color));
+
+  &:focus {
+    border-color: rgb(var(--border-focus));
+  }
+}
+
+.btn {
+  color: rgb(var(--button-color));
+  background-color: rgb(var(--button-bg));
+
+  &:hover {
+    background-color: rgb(var(--button-hover));
+  }
+
+  &:active {
+    background-color: rgb(var(--button-active));
+  }
+}
+
+.section-border {
+  border-bottom: 2px solid rgb(var(--section-border));
 }
